@@ -1,0 +1,474 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+.logo a{
+  color: white;
+  text-decoration: none;
+}
+.hamburger div{
+    width: 40px;
+    height: 4px;
+    background-color: rgb(252, 104, 6);
+    margin: 7px;
+    transition: transform 0.5s ease-in-out;
+}
+.hamburger{
+  cursor: pointer;
+  right: 2%;
+  padding: 50px;
+  
+}
+.toggle .line-1{
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(-45deg) translate(-5px, 10px);
+}
+
+.toggle .line-2{
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(45deg) translate(4px, -4px);
+}
+.hamburger-menu{
+  text-align: center;
+  top: 0.5%;
+  height: 100vh;
+  right: 0px;
+  width: 15%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: seashell;
+  overflow: visible;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+}
+.hamburger-active{
+  transform: translateX(0%);
+}
+.nav-links{
+  display: grid;
+  flex-direction: column;
+  list-style: none;
+  height: 90%;
+  width: 80%;
+  margin: auto;
+}
+.nav-links li{
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgb(252, 104, 6);
+}
+.nav-links a{
+  text-decoration: none;
+  color: rgb(252, 104, 6);
+} 
+.nav-links li:hover{
+  text-decoration: underline;
+}
+#div1{
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slidebg 12s linear infinite 0s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  background-image: url("boy-wearing-red-t-shirt-and-blue-pants-2946421.jpg");
+}
+
+.main-section{
+    display: grid;
+    padding-top: 40vh;
+    align-items: center;
+    justify-content: center;
+}
+.main-section h1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: white;
+    padding: 10px;
+    background-color: rgba(169, 169, 169, 0.8);
+}
+
+.main-section h4{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+@keyframes slidebg{
+  0%{background-image: url("man-carrying-woman-standing-on-the-ground-and-surrounded-by-853406.jpg");}
+  25%{background-image: url("man-playing-guitar-977971.jpg");}
+  50%{background-image: url("happy-little-child-smiling-while-peeking-from-tent-3932961.jpg");}
+  75%{background-image: url("woman-holding-a-smiley-balloon-1236678.jpg");}
+  100%{background-image: url("joe-caione-qO-PIF84Vxg-unsplash.jpg");}
+}
+
+.arrow{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+.arrow:hover{
+  cursor: pointer;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+#second{
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-image: url("boy-wearing-red-t-shirt-and-blue-pants-2946421.jpg");
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  justify-content: center;
+  margin: auto;
+  top: 40%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.charts{
+  display: grid;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  float: left;
+  opacity: 1;
+  grid-template-columns: 90%;
+}
+
+.news{
+  float: right;
+  background-color: greenyellow;
+}
+
+.mychart{
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  padding-top: 5px;
+  width: 100%;
+
+}
+.count {
+  display: block;
+  font-size: 24px;
+  padding: 60px;
+  font-weight: 600;
+  width: 120px;
+}
+.chart-container{
+  width: 90%; height: 90%;
+}
+.charts p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 50px;
+}
+ .charts h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 3px;
+}
+
+.news{
+  font-family: 'Indie Flower', cursive;
+  display: block;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.news h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  font-size: 5rem;
+}
+
+.news p{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  font-size: 2rem;
+}
+.third{display: none;}
+@media screen and (max-width:1650px){
+  .charts{
+    grid-template-rows: 20% 50% 20%;
+  }
+  .container{
+
+    justify-content: center;
+    grid-template-columns: 100%;
+    margin: auto;
+    width: 80%;
+    top: 40%;
+    height: 80%;
+    background-color: white;
+    display: grid;
+    gap: 30px;
+  }
+  .news{
+    padding-bottom: 10%;
+    margin: 0px;
+  }
+  .third{
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(sakura-tree-2033997.jpg);
+  }
+  .news{
+    display: none;
+  }
+  .third .news2{
+    font-family: 'Indie Flower', cursive;
+    display: grid;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: grid;
+  }
+  .third .news2 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    align-items: center;
+  }
+  .third .news2 p{
+      display: flex;
+      font-size: 1.7rem;
+    }
+    .main-section h4{
+      font-size: 1.5rem;
+    }
+
+    .third .news2{
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      background-color: greenyellow;
+      border: none;
+      
+    }
+  .chart-container{
+    height: 80%;
+  }
+  .news p{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    font-size: 2rem;
+  }
+  .mychart{
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width:900px){
+  .news{
+    display: none;
+  }
+  .third .news2{
+    font-family: 'Indie Flower', cursive;
+    display: grid;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    display: grid;
+  }
+  .third .news2 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    align-items: center;
+  }
+  .third .news2 p{
+      display: flex;
+      font-size: 1.7rem;
+    }
+    .main-section h4{
+      font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width:720px), screen and (max-height:520px){
+  .logo{
+    font-size: 20px;
+  }
+  .hamburger{
+    padding: 0px;
+    transition: transform 0.5s ease-in-out;
+  }
+  .hamburger-menu{
+    width: 45%;
+  }
+  .hamburger div{
+    width: 30px;
+    height: 2px;
+  }
+  .main-section h1{
+    font-size: 2rem;
+  }
+  .main-section h4{
+    font-size: 1rem;
+  }
+
+  .charts h3{
+    font-size: medium;
+  }
+  .chart-container{
+    height: 200px;
+  }
+  .charts p{
+    padding: 0%;
+    font-size: 1rem;
+  }
+  .third .news2{
+    grid-template-rows: 10% 90%;
+  }
+  .third .news2{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    background-color: greenyellow;
+    border: none;
+    
+  }
+  .third .news2 h1{
+    font-size: 6.5vw;
+  }
+  .third .news2 p{
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 4.0vw;
+  }
+  .toggle .line-1{
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(-45deg) translate(-3px, 10px);
+  }
+  
+  .toggle .line-2{
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(45deg) translate(4px, -4px);
+  }
+  .nav-links a{
+    font-size: 1rem;
+  }
+  .arrow span{
+    width: 15px;
+    height: 15px;
+  }
+}
+/*
+@media screen and (max-width:700px){
+  .third .news2{
+    display: grid;
+    float: right;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    background-color: rgba(153, 205, 50, 0);
+  }
+  .news h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    font-size: 3rem;
+  }
+  
+  .news p{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    font-size:25px;
+    line-height: normal;
+  }
+}
+
+/*

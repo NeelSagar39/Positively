@@ -1,0 +1,184 @@
+.navbar{
+    z-index: 1;
+}
+.logo a{
+    color: rgb(0, 255, 255);
+    z-index: 1;
+}
+.hamburger div{
+    background-color: white;
+}
+.hamburger-menu{
+    background-color: rgb(36, 35, 35);
+}
+.div1{
+    width: 100%;
+    height: 100vh;
+    background: rgb(34,195,88);
+    background: linear-gradient(0deg, rgba(34,195,88,0) 51%, rgba(253,104,45,1) 51%);
+    display: flex;
+    justify-content: center;
+}
+.contact-div{
+    margin-top: 15%;
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 5px 5px 20px #868686;
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main right';
+    grid-template-columns: 50% 50%;
+     grid-gap: 10px;
+     font-family: 'Baloo Chettan 2', cursive;
+}
+
+.contact-div h2{
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    grid-area: header;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 2rem;
+    border-bottom: solid;
+    border-color: darkgray;
+    color: rgba(253,104,45,1);
+}
+
+.content{
+    grid-area: main;
+    height: 90%;   
+    font-family: 'Baloo Chettan 2', cursive; 
+}
+.content p {
+    margin: auto;
+    padding-top:1%;
+    width: 80%;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1.5rem;
+
+}
+.text-fields{
+    grid-area: right;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: 80%;
+    grid-template-rows: 10% 10% 20% 10%;
+    gap: 20px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+.name{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(224, 224, 224);
+    padding-left: 12px;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1rem;
+}
+.name:focus{
+    border: none;
+}
+.email{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(224, 224, 224);
+    padding-left: 12px;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1rem;
+}
+
+.message{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(224, 224, 224);
+    padding-left: 12px;
+    padding-top: 12px;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1rem;
+}
+.text-fields a{
+    text-decoration: none;
+    text-emphasis: none;
+}
+.send{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(253,104,45,1);
+    color: honeydew;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1rem;
+}
+@media screen and (max-width:1300px), screen and (max-height: 760px){
+    .text-fields {
+        grid-template-rows: 10% 10% 30% 10%;
+    }
+    .contact-div{
+        z-index: 0;
+        position: absolute;
+        top: 10%;
+        height: 80%;
+        grid-template-areas:'header'
+        'main'
+        'right';
+        grid-template-columns: 100%;
+
+    }
+    .content{
+        grid-template-rows:auto ;
+    }
+    .content p {
+        font-size: 1.4vw;
+    }
+    .contact-div h2{
+        width: 40%;
+    }
+}
+@media screen and (max-width:800px){
+    .contact-div h2{
+        width: 50%;
+    }
+}
+@media screen and (max-width:720px){
+    .contact-div h2 {
+        width: 50%;
+        font-size: 5.5vw;
+    }
+    .content {
+        font-size: 1.5vw;
+    }
+    .content p {
+        font-size: 2.0vw;
+    }
+    .text-fields {
+        grid-template-rows: 10% 10% 30% 10%;
+    }
+    .name{
+        font-size: 12px;
+    }
+    .email{
+        font-size: 12px;
+    }
+    .message{
+        font-size: 12px;
+    }
+    .send{
+        font-size: 12px;
+    }
+}
+@media screen and ( max-height:460px){
+    .content p { 
+        width: 90%;}
+}
